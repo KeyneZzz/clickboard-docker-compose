@@ -1,0 +1,6 @@
+[submodule "backend/clickboard-be"]
+	path = backend/clickboard-be
+	url = https://github.com/KeyneZzz/clickboard-be.git
+[submodule "frontend/clickboard-fe"]
+	path = frontend/clickboard-fe
+	url = https://github.com/KeyneZzz/clickboard-fe.git

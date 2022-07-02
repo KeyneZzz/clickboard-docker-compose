@@ -1,0 +1,20 @@
+services:
+  frontend:
+    image: keynezzz/clickboard-fe
+    container_name: clickboard-frontend
+    ports: 
+      - "8080:80"
+    volumes: 
+      - ./frontend/default.conf:/etc/nginx/conf.d/default.conf
+    networks:
+      - clickboard-net
+  backend:
+    image: keynezzz/clickboard-be
+    container_name: clickboard-backend
+    volumes: 
+      - ./backend/clipboardObjects.json:/backend/clipboardObjects.json
+    networks:
+      - clickboard-net
+
+networks:
+  clickboard-net:
